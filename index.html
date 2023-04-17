@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Overview-Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <!-- Overriding bootstrap css using style.css -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body >
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div id="hubberg" onclick="hummberger()">
+      <span class="glyphicon glyphicon-th-list" ></span>
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+      <i class="bi toggle-sidebar-btn " id="sdt" ><a href="#"><b>Overview</b></a></i>
+    </div><!-- End Logo -->
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+        <li class="nav-item d-block d-lg-none">
+          <a class="nav-link nav-icon search-bar-toggle " href="#">
+            <i class="bi bi-search"></i>
+          </a>
+        </li><!-- End Search Icon-->
+      <div class="search-bar" >
+      <form class="search-form d-flex align-items-center"  method="get" action="index.html">
+        <!-- <input type="text" name="query" placeholder="Search" title="Enter search keyword"> -->
+        <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+      </form>
+      </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <!-- <button type="button" class="btn-lg" data-toggle="modal" data-target="#myModal"><i class="bi bi-bell " id="notifbell" ></i></button> -->
+            <i class="bi bi-bell btn-lg" id="notifbell" data-toggle="modal" data-target="#myModal"></i>
+            <span class="badge bg-primary badge-number" >4</span>
+          </a><!-- End Notification Icon -->
+        </li><!-- End Notification Nav -->
+        <li class="nav-item dropdown pe-3">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <span class="d-none d-md-block ">Jones Ferdinand</span>&nbsp;&nbsp;
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+          </a><!-- End Profile Iamge Icon -->
+        </li><!-- End Profile Nav -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
+  </header><!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar" >
+    <a href="index.html" class="logo d-flex align-items-center" id="ov">
+      <img src="assets/img/logo.jpg" alt="" id="logo">
+      <span class="d-none d-lg-block" id="dash">Dashboard Kit</span>
+    </a>
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <i class="bi bi-pie-chart-fill"></i>
+          <span>Overview</span>
+        </a>
+      </li>
+<!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#tkt">
+          <i class="bi bi-ticket-detailed-fill"></i><span>Tickets</span>
+        </a>
+      </li>
+<!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-lightbulb-fill"></i><span>Ideas</span>
+        </a>
+      </li>
+<!-- End Tables Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-people-fill"></i><span>Contacts</span>
+        </a>
+      </li>
+<!-- End Charts Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-person-workspace"></i><span>Agents</span>
+        </a>
+      </li>
+<!-- End Icons Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-file-text-fill"></i><span>Articles</span>
+        </a>
+      </li>
+      <hr>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-gear"></i>
+          <span>Settings</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-patch-check-fill"></i>
+          <span>Subscription</span>
+        </a>
+      </li>
+    </ul>
+  </aside><!-- End Sidebar-->
+  <main id="main" class="main">
+    <section class="section dashboard" id="sectionhum">
+      <!-- <div class="row"> -->
+        <!-- Left side columns -->
+        <!-- <div class="col-lg-12"> -->
+          <div class="row">
+            <!-- Sales Card -->
+            <div class="col-xxl-2 col-md-3">
+              <div class="card info-card sales-card">
+                <div class="card-body div_center">
+                  <h4 class="card-title "><span>Unresolved</span></h4>
+                  <h3><b>60</b></h3>
+                  <div class="d-flex align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-2 col-md-3">
+              <div class="card info-card sales-card">
+                <div class="card-body div_center">
+                  <h4 class="card-title"><span>Overdue</span></h4>
+                  <h3><b>16</b></h3>
+                  <div class="d-flex align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xxl-2 col-md-3">
+              <div class="card info-card sales-card">
+                <div class="card-body div_center">
+                  <h4 class="card-title"><span>Open</span></h4>
+                  <h3><b>43</b></h3>
+                  <div class="d-flex align-items-center">
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <div class="col-xxl-2 col-md-3">
+              <div class="card info-card sales-card">
+                <div class="card-body div_center">
+                  <h4 class="card-title"><span>On hold</span></h4>
+                  <h3><b>60</b></h3>
+                  <div class="d-flex align-items-center">
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Sales Card -->
+          </div>
+            <!-- Reports -->
+          <div class="row">
+            <div class="col-sm-8 col-lg-8">
+              <div class="card">
+
+                <div class="card-body">
+                  <h4 class="card-title">Today's trends <br><span>as of 25 May 2019, 09:41 PM</span></h4>
+                  <!-- Line Chart -->
+                  <div id="reportsChart"></div>
+                  <div id="chart_js">
+                  </div>
+                  <!-- End Line Chart -->
+                </div> 
+              </div>
+            </div><!-- End Reports -->
+
+            <div class="col-sm-4 col-lg-4">
+            <div id="dc">
+              <span class="s1">Resolved</span>
+              <h3>449</h3>
+              <hr>
+              <span class="s1">Received</span>
+              <h3>429</h3>
+              <hr>
+              <span class="s1">Average first response time</span>
+              <h3>33m</h3>
+              <hr>
+              <span class="s1">Average response tme</span>
+              <h3>3h 8m</h3>
+              <hr>
+              <span class="s1">Resolution within SLA</span>
+              <h3>94%</h3>
+              </div>
+            </div>
+          </div>
+        </div><!-- End Left side columns -->
+      </div>
+    </section>
+
+    <!-- <div class="col-xxl-8 col-lg-12"> -->
+    <div class="row row1">
+      <div class="col-xxl-4 col-6 imptcard">
+        <div class="card-2" id="aa">
+          <div class="card-body">
+            <a class="icon" href="#" data-bs-toggle="dropdown" id="decor"><b>view details</b></a>
+            <h4 id="tkt" class="card-title"><b>Unresolved Tickets</b></h4>
+            <!-- <div class="view"> -->
+            <!-- </div> -->
+            <br>
+            <div class="num">
+            <h6>Group:<span><b>Support</b></span></h6>
+            <br>
+            <div id="flxcenter">
+              <p class="tet"><b>Waiting on Feature Request</b></p>
+              <p class="number">4238</p>
+            </div>
+            <!-- <p class="tet"><b>Waiting on Feature Request</b></p>
+            <p class="number">4238</p> -->
+            <hr class="ctbg">
+            <div id="flxcenter">
+              <p class="tet"><b>Customers response</b></p>
+              <p class="number">1005</p>
+            </div>
+            <hr class="ctbg">
+            <div id="flxcenter" class="awat">
+              <p class="tet"><b>Awaiting Developer Fix</b></p>
+              <p class="number">914</p>
+            </div>
+            <hr class="ctbg">
+            <div id="flxcenter">
+              <p class="tet"><b>Pending</b></p>
+              <p class="number">281</p>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xxl-4 col-6 imptcard">
+        <div class="card-2">
+  
+          <div class="card-body">
+            <a class="icon" href="#" data-bs-toggle="dropdown" id="decor"><b>view all</b></a>
+            <h4 class="card-title"><b>Tasks</b></h4>
+            <br>
+            <h6>Today</h6><br>
+            <div id="flxcenter">
+              <span class="s1" id="dc">Create new task</span><i class="bi bi-file-plus" id="crtn"></i>
+            </div>
+            <hr class="ctbg">
+            <div id="flxcenter" >
+              <p><b>
+              <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Finish ticket update</b></p><span class="urgent"><b>URGENT</b></span>
+            </div>
+            <hr class="ctbg">
+            <div id="flxcenter">
+              <p><b>
+              <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Create new ticket example</b></p><span class="new"><b>NEW</b></span>
+            </div>
+            <hr class="ctbg">
+            <div id="flxcenter">
+              <p><b>
+              <input type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Update ticket report</b></p><span class="defalt"><b>DEFAULT</b></span>
+            </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <!-- Bellicon Notification start -->
+
+  <div class="container">
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" >
+            <h4 class="modal-title" >Notifications</h4>    
+          </div>
+          <div class="modal-body">
+            <p>Average first response time change.</p>
+            <p>Resolution within SLA 94%.</p>
+            <p>Unresolved Tickets flexible.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Bellicon Notification End -->
+</main>
+  <!-- Including JS Files -->
+  <script src="js/style.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+</body>
+</html>
